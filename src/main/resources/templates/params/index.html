@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SpringBoot App</title>
+</head>
+
+<body>
+    <h1>Send RequestParam sample</h1>
+    <ul>
+        <li>
+            <a th:href="@{/params/string(text='Hello, World!')}">/params/string?text=Hello, World!</a>
+        </li>
+        <li>
+            <a th:href="@{/params/string(text='Hello, SpringFramework!')}">/params/string?text=Hello, SpringFramework!</a>
+        </li>
+        <li>
+            <a th:href="@{/params/mix-params(greeting='Hello, SpringFramework!', number=10)}">/params/mix-params?greeting=Hello, SpringFramework!&number=10</a>
+        </li>
+        <li>
+            <a th:href="@{/params/mix-params-servlet(greeting='Hello, SpringFramework!', number=10)}">/params/mix-params-servlet?greeting=Hello, SpringFramework!&number=10</a>
+        </li>
+    </ul>
+</body>
+
+</html>
